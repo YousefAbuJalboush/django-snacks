@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django Things</title>
+</head>
+
+<style>
+    body {
+        margin: 0;
+        background-color: rgb(129, 128, 128);
+    }
+
+    /* ############### nav ############### */
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        padding: 3px;
+    }
+
+    nav li {
+        float: left;
+    }
+
+    nav li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 24px;
+    }
+
+    nav li a:hover:not(.active) {
+        background-color: #111;
+    }
+
+    nav .active {
+        background-color: #04AA6D;
+    }
+
+    /* ############### footer ############### */
+    footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #333;
+        color: white;
+        text-align: center;
+        font-size: 24px;
+    }
+
+    /* ############### Div ############### */
+    div{
+        padding: 0px 100px;
+        color: white;
+    }
+    div p{
+        font-size: 25px;
+    }
+</style>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                {% block link %}
+                <!-- child link goes here -->
+                <li><a class="active" href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                {% endblock link%}
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        <!-- child content goes here -->
+        {% endblock content%}
+
+        {% block text %}
+        <!-- child text goes here -->
+        {% endblock text%}
+    </main>
+    <footer>
+        <p>&copy; Yousef Abu-Jalboush</p>
+    </footer>
+
+</body>
+
+</html>
