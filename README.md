@@ -15,4 +15,4 @@
 
 | Table Of Content                               | Links                                        |
 | ---------------------------------------------- | -------------------------------------------  |
-| PR '1' > Intro to Django                       | [PR '1' > Intro to Django]()       |
+| PR '1' > Intro to Django                       | [PR '1' > Intro to Django](https://github.com/YousefAbuJalboush/django-snacks/pull/1)|
